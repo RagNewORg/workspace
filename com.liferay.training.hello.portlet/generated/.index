@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository increment="1469759755941" name="com.liferay.training.hello.portlet" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.liferay.training.hello.portlet"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="0.0.0.201607290235"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="3de4ccab3cd59bd602c10ee848e68da10d44ed97b6edfae4696e1add57e2d6fc"/>
+      <attribute name="url" value="generated/com.liferay.training.hello.portlet.jar"/>
+      <attribute name="size" type="Long" value="5781"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="com.liferay.training.hello.portlet"/>
+      <attribute name="bundle-version" type="Version" value="0.0.0.201607290235"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="com.liferay.training.hello.portlet"/>
+      <attribute name="bundle-version" type="Version" value="0.0.0.201607290235"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" type="List&lt;String&gt;" value="javax.portlet.Portlet"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" type="List&lt;String&gt;" value="javax.portlet.Portlet"/>
+      <attribute name="javax.portlet.init-param.view-template" value="/resources/html/view.jsp"/>
+      <attribute name="javax.portlet.security-role-ref" value="power-user,user"/>
+      <attribute name="javax.portlet.resource-bundle" value="content.Language"/>
+      <attribute name="javax.portlet.init-param.template-path" value="/resources/html"/>
+      <attribute name="com.liferay.portlet.show-portlet-access-denied" value="false"/>
+      <attribute name="com.liferay.portlet.instanceable" value="true"/>
+      <attribute name="javax.portlet.display-name" value="Hello Portlet"/>
+      <attribute name="com.liferay.portlet.display-category" value="category.sample"/>
+      <directive name="uses" value="javax.portlet"/>
+    </capability>
+    <capability namespace="bndtools.workspace">
+      <attribute name="bndtools.workspace" value="file:/Users/dimple.koticha/liferay-developer-studio/workspace"/>
+      <attribute name="project.path" value="/com.liferay.training.hello.portlet"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=com.liferay.training.service.hello)"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.portlet)"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=com.liferay.training.service.hello.HelloService)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=com.liferay.training.service.hello.HelloService)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+  </resource>
+</repository>

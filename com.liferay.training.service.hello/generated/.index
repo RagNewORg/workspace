@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository increment="1469718500834" name="com.liferay.training.service.hello" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.liferay.training.service.hello"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="1.0.0.201607281508"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="f107e364b6b8312bb5123f2b43e29940bc4255dc41f2004aed56600f5a740847"/>
+      <attribute name="url" value="generated/com.liferay.training.service.hello.jar"/>
+      <attribute name="size" type="Long" value="3234"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="com.liferay.training.service.hello"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201607281508"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="com.liferay.training.service.hello"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201607281508"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.liferay.training.service.hello"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="com.liferay.training.service.hello"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201607281508"/>
+    </capability>
+    <capability namespace="bndtools.workspace">
+      <attribute name="bndtools.workspace" value="file:/Users/dimple.koticha/liferay-developer-studio/workspace"/>
+      <attribute name="project.path" value="/com.liferay.training.service.hello"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+</repository>

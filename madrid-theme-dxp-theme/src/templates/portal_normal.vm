@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+#parse ($init)
+
+<html class="$root_css_class" dir="#language ("lang.dir")" lang="$w3c_language_id">
+
+<head>
+	<title>$the_title - $company_name</title>
+
+	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
+
+	$theme.include($top_head_include)
+
+	#set ($navigationColor = $theme.getSetting("navigation-color"))
+	#set ($navigationTextColor = $theme.getSetting("navigation-text-color"))
+	#set ($PortletNavigationColor = $theme.getSetting("portlets-navigation-color"))
+	#set ($PortletNavigationTextColor = $theme.getSetting("portlets-navigation-text-color"))
+	#set ($footerColor = $theme.getSetting("footer-color"))
+	#set ($footerTextColor = $theme.getSetting("footer-text-color"))
+	#set ($linkColor = $theme.getSetting("link-color"))
+
+	#if (($navigationColor!="") || ($navigationTextColor!="") || ($PortletNavigationColor!="") || ($PortletNavigationTextColor!="") || ($footerColor!="") || ($footerTextColor!=""))
+		<style>
+		#if (($navigationColor!="") || ($navigationTextColor!=""))
+			.aui #wrapper .navigation-level1, .aui .nav.hamburger-menu, .aui #wrapper .portlet-title, .aui #content a.btn-danger, .aui body #macModal .modal-header{
+				background: $navigationColor !important;
+				color: $navigationTextColor !important;
+			}
+			.aui .list-container .list-item:hover a {
+				box-shadow: inset 0 0 0 10px $navigationColor;
+			}
+			.aui #wrapper .navigation-level1 a, .aui #wrapper .portlet-title .portlet-title-text, .aui #wrapper .navigation-level1 .navbar .nav>li>a:hover, .aui #wrapper .navigation-level1 .navbar .nav>li>a:active, .aui #wrapper .navigation-level1 .navbar .nav>li>a:focus, .aui body #macModal .modal-header h1, .aui #content a.dropdown-toggle.direction-down {
+				color: $navigationTextColor;
+			}
+
+			.aui #content a, .aui #content a:hover, .aui #content a:active {
+				color: $linkColor;
+			}
+		#end
+		#if (($PortletNavigationColor!="") || ($PortletNavigationTextColor!=""))
+			.aui #wrapper .navigation-level2 {
+				background: $PortletNavigationColor;
+				color: $PortletNavigationTextColor;
+			}
+			.aui #wrapper .navigation-level2 .portletsIndex ul li a {
+				color: $PortletNavigationTextColor;
+			}
+			.aui #wrapper .navigation-level2 .portletsIndex ul li.aactive, .aui #wrapper .navigation-level2 .portletsIndex ul li:hover {
+				background: rgba(0 ,0 ,0 ,0.2);
+			}
+		#end
+		#if (($footerColor!="") || ($footerTextColor!=""))
+			.aui #footer {
+				background: $footerColor;
+				color: $footerTextColor;
+			}
+			.aui #footer a {
+				color: $footerTextColor;
+			}
+		#end
+		</style>
+	#end
+</head>
+
+#set ($lateralPortletsIndex = $theme.getSetting("lateral-portlets-index"))
+
+#if ($lateralPortletsIndex == true)
+	#set ($css_class = "${css_class} lateral-portlets-index")
+#end
+
+#set ($magicMouseScroll = $theme.getSetting("magic-mouse-scroll"))
+
+#if ($magicMouseScroll == true)
+	#set ($css_class = "${css_class} magic-mouse-scroll")
+#end
+
+#set ($portletsAutoHeight = $theme.getSetting("portlets-auto-height"))
+
+#if ($portletsAutoHeight == true)
+	#set ($css_class = "${css_class} portlets-auto-height")
+#end
+
+<body class="$css_class">
+<div class="loading"></div>
+<a href="#main-content" id="skip-to-content">#language ("skip-to-content")</a>
+
+$theme.include($body_top_include)
+
+#if ($is_signed_in)
+	#dockbar()
+#end
+
+<div id="wrapper">
+	<header id="banner" role="banner">
+		#if ($has_navigation || $is_signed_in)
+			#parse ("$full_templates_path/navigation.vm")
+		#end
+	</header>
+
+	<div id="content">
+		##<nav id="breadcrumbs">#breadcrumbs()</nav>
+
+		#if ($selectable)
+			$theme.include($content_include)
+		#else
+			$portletDisplay.recycle()
+
+			$portletDisplay.setTitle($the_title)
+
+			$theme.wrapPortlet("portlet.vm", $content_include)
+		#end
+	</div>
+
+	<footer id="footer" role="contentinfo">
+		<div class="container">
+			#set ($footerContent = $theme.getSetting("footer-web-content-article-id"))
+
+			#if (($footerContent!=""))
+				$theme.journalArticle($footerContent, $themeDisplay.getSiteGroupId(), "")
+			#else
+				#parse ("$full_templates_path/footer.vm")
+			#end
+
+			#set ($footerBreadcrumbs = $theme.getSetting("footer-breadcrumbs"))
+			#if (($footerBreadcrumbs == true))
+				<div class="row pre-breadcrumbs">
+					<nav class="span12">#breadcrumbs()</nav>
+				</div>
+			#end
+		</div>
+	</footer>
+</div>
+
+$theme.include($body_bottom_include)
+
+$theme.include($bottom_include)
+
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="bin" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="aQute.bnd.classpath.container"/>
+	<classpathentry kind="lib" path="/Users/dimple.koticha/liferay/demo/liferay-dxp-digital-enterprise-7.0-ga1-training/osgi/core/org.eclipse.osgi.jar"/>
+	<classpathentry kind="lib" path="/Users/dimple.koticha/liferay/demo/liferay-dxp-digital-enterprise-7.0-ga1-training/tomcat-8.0.32/lib/ext/portlet.jar"/>
+	<classpathentry kind="lib" path="/com.liferay.training.service.hello/generated/com.liferay.training.service.hello.jar"/>
+	<classpathentry kind="lib" path="/com.liferay.training.service.hello.impl/generated/com.liferay.training.service.hello.impl.jar"/>
+	<classpathentry kind="lib" path="/Users/dimple.koticha/liferay/demo/liferay-dxp-digital-enterprise-7.0-ga1-training/tomcat-8.0.32/lib/jsp-api.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

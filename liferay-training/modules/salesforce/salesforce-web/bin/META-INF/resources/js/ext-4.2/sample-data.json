@@ -1,0 +1,152 @@
+[
+   {
+      "Name":"Tim Barr",
+      "Email":"barr_tim@grandhotels.com",
+      "Department":"Finance",
+      "MobilePhone":"(312) 596-1230",
+      "type":"Contact",
+      "Title":"SVP, Administration and Finance"
+   },
+   {
+      "Name":"John Bond",
+      "Email":"bond_john@grandhotels.com",
+      "Department":"Facilities",
+      "MobilePhone":"(312) 596-1563",
+      "type":"Contact",
+      "Title":"VP, Facilities"
+   },
+   {
+      "Name":"Lauren Boyle",
+      "Email":"lboyle@uog.com",
+      "Department":"Technology",
+      "MobilePhone":"(212) 842-5611",
+      "type":"Contact",
+      "Title":"SVP, Technology"
+   },
+   {
+      "Name":"Liz D'Cruz",
+      "Email":"ldcruz@uog.com",
+      "Department":"Production",
+      "MobilePhone":"(650) 345-6637",
+      "type":"Contact",
+      "Title":"VP, Production"
+   },
+   {
+      "Name":"Josh Davis",
+      "Email":"j.davis@expressl&t.net",
+      "Department":"Warehouse Mgmt",
+      "MobilePhone":"(503) 421-4387",
+      "type":"Contact",
+      "Title":"Director, Warehouse Mgmt"
+   },
+   {
+      "Name":"Sean Forbes",
+      "Email":"sean@edge.com",
+      "Department":"Finance",
+      "MobilePhone":"(512) 757-4561",
+      "type":"Contact",
+      "Title":"CFO"
+   },
+   {
+      "Name":"Edna Frank",
+      "Email":"efrank@genepoint.com",
+      "Department":"Technology",
+      "MobilePhone":"(650) 867-7686",
+      "type":"Contact",
+      "Title":"VP, Technology"
+   },
+   {
+      "Name":"Rose Gonzalez",
+      "Email":"rose@edge.com",
+      "Department":"Procurement",
+      "MobilePhone":"(512) 757-9340",
+      "type":"Contact",
+      "Title":"SVP, Procurement"
+   },
+   {
+      "Name":"Avi Green",
+      "Email":"agreen@uog.com",
+      "Department":"Finance",
+      "MobilePhone":"(212) 842-2383",
+      "type":"Contact",
+      "Title":"CFO"
+   },
+   {
+      "Name":"Jane Grey",
+      "Email":"jane_gray@uoa.edu",
+      "Department":"Administration",
+      "MobilePhone":"(520) 773-4539",
+      "type":"Contact",
+      "Title":"Dean of Administration"
+   },
+   {
+      "Name":"Ashley James",
+      "Email":"ajames@uog.com",
+      "Department":"Finance",
+      "MobilePhone":"+44 191 3456234",
+      "type":"Contact",
+      "Title":"VP, Finance"
+   },
+   {
+      "Name":"Babara Levy",
+      "Email":"b.levy@expressl&t.net",
+      "Department":"Operations",
+      "MobilePhone":"(503) 421-5451",
+      "type":"Contact",
+      "Title":"SVP, Operations"
+   },
+   {
+      "Name":"Jake Llorrac",
+      "type":"Contact"
+   },
+   {
+      "Name":"Siddartha Nedaerk",
+      "type":"Contact"
+   },
+   {
+      "Name":"Stella Pavlova",
+      "Email":"spavlova@uog.com",
+      "Department":"Production",
+      "MobilePhone":"(212) 842-5501",
+      "type":"Contact",
+      "Title":"SVP, Production"
+   },
+   {
+      "Name":"Tom Ripley",
+      "Email":"tripley@uog.com",
+      "Department":"Executive Team",
+      "MobilePhone":"(650) 345-7636",
+      "type":"Contact",
+      "Title":"Regional General Manager"
+   },
+   {
+      "Name":"Jack Rogers",
+      "Email":"jrogers@burlington.com",
+      "type":"Contact",
+      "Title":"VP, Facilities"
+   },
+   {
+      "Name":"Arthur Song",
+      "Email":"asong@uog.com",
+      "Department":"Executive Team",
+      "MobilePhone":"(212) 842-4535",
+      "type":"Contact",
+      "Title":"CEO"
+   },
+   {
+      "Name":"Pat Stumuller",
+      "Email":"pat@pyramid.net",
+      "Department":"Finance",
+      "MobilePhone":"(014) 454-6364",
+      "type":"Contact",
+      "Title":"SVP, Administration and Finance"
+   },
+   {
+      "Name":"Andy Young",
+      "Email":"a_young@dickenson.com",
+      "Department":"Internal Operations",
+      "MobilePhone":"(785) 265-5350",
+      "type":"Contact",
+      "Title":"SVP, Operations"
+   }
+]

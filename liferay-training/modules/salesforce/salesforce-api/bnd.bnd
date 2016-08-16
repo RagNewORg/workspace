@@ -1,0 +1,9 @@
+Bundle-SymbolicName: salesforce-api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.liferay.salesforce.exception,\
+	com.liferay.salesforce.model,\
+	com.liferay.salesforce.service,\
+	com.liferay.salesforce.service.messaging
+
+Include-Resource: @com.sforce.soap.partner-1.0.2.jar

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository increment="1469720309625" name="com.liferay.training.service.hello.impl" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.liferay.training.service.hello.impl"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="1.0.0.201607281538"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="2b90950d685189c62b85a9c80c96d024b971bba6386e15e95f497c0be31ad95c"/>
+      <attribute name="url" value="generated/com.liferay.training.service.hello.impl.jar"/>
+      <attribute name="size" type="Long" value="6012"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="com.liferay.training.service.hello.impl"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201607281538"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="com.liferay.training.service.hello.impl"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201607281538"/>
+    </capability>
+    <capability namespace="bndtools.workspace">
+      <attribute name="bndtools.workspace" value="file:/Users/dimple.koticha/liferay-developer-studio/workspace"/>
+      <attribute name="project.path" value="/com.liferay.training.service.hello.impl"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=com.liferay.training.service.hello)"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=org.osgi.framework)"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+</repository>

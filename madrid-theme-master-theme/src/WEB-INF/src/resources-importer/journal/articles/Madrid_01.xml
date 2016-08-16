@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+        <dynamic-element name="content" type="text_area" 
+        index-type="keyword" index="0">
+                <dynamic-content language-id="en_US">
+                        <![CDATA[
+                        <p class="portlet-title-text hide">Tours</p>
+<div class="img-bg img-bg-fixed bg-right fullHeight" style="background-image:url([$FILE=Madrid_01.jpg$])">
+  <div class="container fullCenter" style="color:#FFF; text-shadow: 1px 1px 2px rgba(150, 150, 150, 0.77);">
+
+  </div>
+</div>
+                        ]]>
+                </dynamic-content>
+        </dynamic-element>
+</root>

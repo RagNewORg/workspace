@@ -1,0 +1,432 @@
+===================================================================
+--- custom.css	Original File
++++ _custom.scss	Updated File
+@@ -1,21 +1,21 @@
+-@import "compass";
++@import "bourbon";
+ @import "compass/css3/user-interface";
+ @import "mixins";
+ 
+-$navigationLevelOneheight: 70px;
+-$navigationLevelTwoheight: 38px;
+-$solidMainColor: #C82425;
++$navigation-level-oneheight: 70px;
++$navigation-level-twoheight: 38px;
++$solid-main-color: #C82425;
+ 
+-.aui {
++html {
+ 	body {
+ 		@include transition(all 0.4s ease);
+ 		@include transition(translate3d(0,0,0));
+ 
+-		margin-top: $navigationLevelOneheight;
++		margin-top: $navigation-level-oneheight;
+ 
+ 		&.lateral-portlets-index-ready {
+-			margin-top: $navigationLevelOneheight+$navigationLevelTwoheight;
++			margin-top: $navigation-level-oneheight+$navigation-level-twoheight;
+ 		}
+ 
+ 		&.macModal {
+ 			overflow: hidden;
+@@ -35,17 +35,17 @@
+ 			&.animOn {
+ 				top: 0 !important;
+ 
+ 				@include transition(all 0.2s ease);
+-				@include translate3d(0, 0, 0, 0);
++				@include translate3d-deprecated(0, 0, 0, 0);
+ 			}
+ 
+-			.row-fluid {
++			.row {
+ 				margin: 25px 0;
+ 			}
+ 
+ 			.modal-header {
+-				background: $solidMainColor;
++				background: $solid-main-color;
+ 				border-bottom: 1px solid #666;
+ 				color: #FFF;
+ 				padding: 10px 25px;
+ 
+@@ -76,10 +76,10 @@
+ 			}
+ 		}
+ 	}
+ 
+-	.btn-danger {
+-		background: $solidMainColor;
++	.btn btn-default-danger {
++		background: $solid-main-color;
+ 	}
+ 
+ 	.loading {
+ 		@include transition(all 0.1s ease-in-out);
+@@ -110,14 +110,14 @@
+ 		z-index: 2;
+ 	}
+ 
+ 	a {
+-		color: $solidMainColor;
++		color: $solid-main-color;
+ 
+-		@include text-shadow(none);
++		text-shadow: none;
+ 
+ 		&:hover {
+-			color: darken($solidMainColor, 10%);
++			color: darken($solid-main-color, 10%);
+ 		}
+ 	}
+ 
+ 	.texture {
+@@ -167,9 +167,9 @@
+ 			margin: 0 auto;
+ 		}
+ 
+ 		.portlet-title {
+-			background: darken($solidMainColor, 5%);
++			background: darken($solid-main-color, 5%);
+ 			text-align: center;
+ 			margin: 0;
+ 
+ 			.portlet-title-text {
+@@ -190,9 +190,9 @@
+ 			padding: 0;
+ 		}
+ 
+ 		.navigation-level1 {
+-			max-height: $navigationLevelOneheight;
++			max-height: $navigation-level-oneheight;
+ 			padding: 10px 0 0;
+ 			height: 60px;
+ 			z-index: 1;
+ 
+@@ -206,13 +206,13 @@
+ 				}
+ 			}
+ 
+ 			.navbar .nav>li>a {
+-				@include text-shadow(none);
+-				padding: $navigationLevelOneheight/4 15px;
++				text-shadow: none;
++				padding: $navigation-level-oneheight/4 15px;
+ 
+ 				&:hover, &:active, &:focus {
+-					color: darken($solidMainColor, 10%);
++					color: darken($solid-main-color, 10%);
+ 				}
+ 			}
+ 
+ 			.navbar .nav>li.selected>a {
+@@ -237,23 +237,23 @@
+ 			}
+ 		}
+ 
+ 		.navigation-level2 {
+-			background: $solidMainColor;
+-			margin-top: -$navigationLevelTwoheight;
+-			max-height: $navigationLevelTwoheight;
++			background: $solid-main-color;
++			margin-top: -$navigation-level-twoheight;
++			max-height: $navigation-level-twoheight;
+ 			position: absolute;
+ 			width: 100%;
+ 
+ 			.portletsIndex ul li {
+ 				text-align: center;
+ 
+ 				&.aactive, &:hover {
+-					background: darken($solidMainColor, 5%);
++					background: darken($solid-main-color, 5%);
+ 				}
+ 
+ 				a {
+-					@include text-shadow(none);
++					text-shadow: none;
+ 					@include ellipsis;
+ 
+ 					color: #FFF;
+ 					display: block;
+@@ -271,9 +271,9 @@
+ 			margin-top: 0;
+ 		}
+ 
+ 		&.scroll-down #wrapper .navigation-level2 {
+-			margin-top: -$navigationLevelTwoheight;
++			margin-top: -$navigation-level-twoheight;
+ 		}
+ 	}
+ 
+ 	.scroll-down-heavy, .scroll-up-heavy {
+@@ -343,9 +343,9 @@
+ 		.nav.hamburger-menu {
+ 			@include transition(all 0.4s ease);
+ 			@include box-shadow (3px 0px 2px 0 rgba(0, 0, 0 ,0.25));
+ 
+-			background: darken($solidMainColor, 5%);
++			background: darken($solid-main-color, 5%);
+ 			height: 100%;
+ 			left: inherit;
+ 			overflow: auto;
+ 			position: fixed;
+
+Index: content.css
+===================================================================
+--- content.css	Original File
++++ content.css	Updated File
+@@ -1,9 +1,9 @@
+-@import "compass";
++@import "bourbon";
+ @import "compass/css3/user-interface";
+ @import "mixins";
+ 
+-.aui {
++html {
+ 	/* ---------- List styles ---------- */
+ 
+ 	.list-container .list-item {
+ 		display: block;
+@@ -86,9 +86,9 @@
+ 				width: 80%;
+ 
+ 				h1, h2, p, a {
+ 					@include transition(all 0.2s ease);
+-					@include translate3d(0, 0, 0, 0);
++					@include translate3d-deprecated(0, 0, 0, 0);
+ 
+ 					opacity: 0;
+ 				}
+ 
+@@ -145,14 +145,14 @@
+ 					position: absolute;
+ 					width: 50px;
+ 
+ 					@include transition(all 0.2s ease);
+-					@include translate3d(0, 0, 0, 0);
++					@include translate3d-deprecated(0, 0, 0, 0);
+ 
+ 					&:hover {
+-						@include opacity(0.4);
++						opacity: 0.4;
+ 						@include transition(all 0.2s ease);
+-						@include translate3d(0, 0, 0, 0);
++						@include translate3d-deprecated(0, 0, 0, 0);
+ 					}
+ 				}
+ 
+ 				.carousel-menu-next {
+@@ -192,22 +192,22 @@
+ 	}
+ }
+ 
+ @include respond-to(phone, tablet) {
+-	.aui {
++	html {
+ 		.list-container .list-item {
+ 			width: 50% !important;
+ 
+ 			.list-text {
+-				@include rotate(0);
++				@include rotate-deprecated(0);
+ 				bottom: 0
+ 			}
+ 		}
+ 	}
+ }
+ 
+ @include respond-to(phone) {
+-	.aui {
++	html {
+ 		.list-container .list-item {
+ 			width: 100% !important;
+ 		}
+ 	}
+
+Index: dockbar-bubbles.css
+===================================================================
+--- dockbar-bubbles.css	Original File
++++ dockbar-bubbles.css	Updated File
+@@ -1,41 +1,41 @@
+-@import "compass";
++@import "bourbon";
+ @import "compass/css3/user-interface";
+ @import "mixins";
+ 
+-$backgroundSolidColor: #118ADE;
+-$buttonsRadius: 50%;
+-$dockbarMaCiconWidth: 40px;
+-$dockbarMaCWidth: 60px;
++$background-solid-color: #118ADE;
++$buttons-radius: 50%;
++$dockbar-ma-cicon-width: 40px;
++$dockbar-ma-c-width: 60px;
+ 
+ %navbar-item-style {
+-	background: $backgroundSolidColor;
++	background: $background-solid-color;
+ 	border: none;
+ 	color: #FFF;
+ 	font-size: 20px;
+-	height: $dockbarMaCiconWidth;
++	height: $dockbar-ma-cicon-width;
+ 	line-height: 40px;
+ 	margin: 10px 0 0 10px;
+ 	padding: 0;
+ 	text-align: center;
+-	width: $dockbarMaCiconWidth;
++	width: $dockbar-ma-cicon-width;
+ 
+-	@include border-radius($buttonsRadius);
++	border-radius: $buttons-radius;
+ 	@include transition(all 0.3s ease-in-out);
+ 
+ 	&:hover {
+-		background: darken($backgroundSolidColor, 20%);
++		background: darken($background-solid-color, 20%);
+ 	}
+ }
+ 
+-.aui {
++html {
+ 	.dockbar-bubbles {
+ 		.portlet-dockbar {
+ 			.navbar.dockbar {
+ 				height: inherit;
+ 				padding: 0;
+ 				position: fixed;
+-				width: $dockbarMaCWidth;
++				width: $dockbar-ma-c-width;
+ 				z-index: 350;
+ 
+ 				.navbar-inner {
+ 					background: inherit;
+@@ -45,9 +45,9 @@
+ 				}
+ 
+ 				@include transition(all 0.3s ease-in-out);
+ 
+-				.container .nav-collapse {
++				.container .navbar-collapse {
+ 					padding: 0;
+ 
+ 					&>ul {
+ 						margin: 0;
+@@ -62,9 +62,9 @@
+ 								@extend %navbar-item-style;
+ 							}
+ 
+ 							&.open>a {
+-								background-color: darken($backgroundSolidColor, 20%);
++								background-color: darken($background-solid-color, 20%);
+ 							}
+ 
+ 							.nav-item-icon {
+ 								display: inline-block;
+@@ -76,9 +76,9 @@
+ 
+ 							&>.dropdown-menu {
+ 								background: #FFF;
+ 								border: 1px solid #CCC;
+-								left: $dockbarMaCWidth;
++								left: $dockbar-ma-c-width;
+ 								margin: 0;
+ 								position: absolute;
+ 								top: 0;
+ 
+@@ -90,9 +90,9 @@
+ 					}
+ 
+ 					&>ul:nth-child(3)>li>.dropdown-menu {
+ 						bottom: 0;
+-						left: $dockbarMaCWidth;
++						left: $dockbar-ma-c-width;
+ 						right: inherit;
+ 						top: inherit;
+ 					}
+ 
+@@ -100,9 +100,9 @@
+ 						display: none;
+ 					}
+ 
+ 					ul.nav-add-controls {
+-						width: ($dockbarMaCWidth*4);
++						width: ($dockbar-ma-c-width*4);
+ 
+ 						li {
+ 							float: left;
+ 
+@@ -159,29 +159,29 @@
+ 							top: 35px;
+ 							width: 20px;
+ 							z-index: 1;
+ 
+-							@include opacity(1);
++							opacity: 1;
+ 
+ 							.user-notifications-count {
+ 								background: red;
+ 								border-width: 0;
+ 								color: #FFF;
+ 								display: block;
+ 								text-align: center;
+ 
+-								@include border-radius($buttonsRadius);
++								border-radius: $buttons-radius;
+ 							}
+ 						}
+ 
+ 						li.dropdown.dockbar-user-notifications .dropdown-menu {
+-							left: $dockbarMaCWidth;
++							left: $dockbar-ma-c-width;
+ 							top: 0;
+ 						}
+ 
+ 						.user-avatar {
+ 							&>.dropdown-menu {
+-								left: $dockbarMaCWidth;
++								left: $dockbar-ma-c-width;
+ 								right: inherit;
+ 							}
+ 
+ 							.user-full-name {
+@@ -225,22 +225,22 @@
+ 			.navbar.dockbar {
+ 				background: none;
+ 
+ 				.container {
+-					&>ul>li>a, .nav-collapse>ul>li>a {
+-						margin-right: -$dockbarMaCiconWidth;
+-						margin-top: -$dockbarMaCiconWidth;
++					&>ul>li>a, .navbar-collapse>ul>li>a {
++						margin-right: -$dockbar-ma-cicon-width;
++						margin-top: -$dockbar-ma-cicon-width;
+ 
+-						@include opacity(0);
++						opacity: 0;
+ 						@include transition(all 0.4s ease-in-out);
+ 					}
+ 
+-					.nav-collapse>ul>li.user-avatar {
++					.navbar-collapse>ul>li.user-avatar {
+ 						&>a.user-avatar-link {
+ 							margin-right: 10px;
+ 							margin-top: 10px;
+ 
+-							@include opacity(1);
++							opacity: 1;
+ 						}
+ 
+ 						.dropdown-menu {
+ 							display: none;
+
+Index: fonts.css
+===================================================================
+--- fonts.css	Original File
++++ fonts.css	Updated File
+
+===================================================================
+--- main.css	Original File
++++ main.scss	Updated File

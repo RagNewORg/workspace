@@ -1,0 +1,8 @@
+Bundle-Version: 1.0.0.${tstamp}
+Bundle-Activator: com.liferay.training.service.hello.module.HelloServiceActivator
+Private-Package: \
+	com.liferay.training.service.hello.impl,\
+	com.liferay.training.service.hello.module
+Import-Package: \
+	com.liferay.training.service.hello,\
+	*

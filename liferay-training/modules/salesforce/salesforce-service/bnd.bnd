@@ -1,0 +1,18 @@
+Bundle-SymbolicName: salesforce-service
+Bundle-Version: 1.0.0
+Liferay-Require-SchemaVersion: 1.0.0
+Liferay-Service: true
+Import-Package: *
+Bundle-ClassPath: lib/json-20160810.jar
+Include-Resource: @com.sforce.soap.partner-1.0.2.jar 
+
+-includeresource: lib/json-20160810.jar
+Private-Package: \
+	com.liferay.salesforce.connection,\
+	com.liferay.salesforce.query,\
+	com.liferay.salesforce.query.builder,\
+	com.liferay.salesforce.service.impl,\
+	com.liferay.salesforce.service.util,\
+	com.liferay.salesforce.util,\
+	com.liferay.salesforce.service.base
+Export-Package: com.liferay.salesforce.connection
