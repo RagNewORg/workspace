@@ -8,7 +8,7 @@ Import-Package: \
 	com.liferay.salesforce.connection\
 	*
 Include-Resource: @com.liferay.util.java-2.2.0.jar
--includeresource: lib/json-20160810.jar, salesforce-service/src/main/java/com/liferay/salesforce/connection
+-includeresource: lib/json-20160810.jar
 Private-Package: \
 	com.liferay.salesforce.portlet,\
 	com.liferay.salesforce.portlet.action,\
