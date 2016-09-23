@@ -15,4 +15,3 @@ Private-Package: \
 	com.liferay.salesforce.service.util,\
 	com.liferay.salesforce.util,\
 	com.liferay.salesforce.service.base
-Export-Package: com.liferay.salesforce.connection

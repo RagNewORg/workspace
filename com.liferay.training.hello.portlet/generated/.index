@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<repository increment="1469759755941" name="com.liferay.training.hello.portlet" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+<repository increment="1474653386666" name="com.liferay.training.hello.portlet" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
   <resource>
     <capability namespace="osgi.identity">
       <attribute name="osgi.identity" value="com.liferay.training.hello.portlet"/>
       <attribute name="type" value="osgi.bundle"/>
-      <attribute name="version" type="Version" value="0.0.0.201607290235"/>
+      <attribute name="version" type="Version" value="0.0.0.201609231756"/>
     </capability>
     <capability namespace="osgi.content">
-      <attribute name="osgi.content" value="3de4ccab3cd59bd602c10ee848e68da10d44ed97b6edfae4696e1add57e2d6fc"/>
+      <attribute name="osgi.content" value="8201fd8a393cfe67b71e705ac2fd7fa19fa879a5d4421f7045019b877ae308f0"/>
       <attribute name="url" value="generated/com.liferay.training.hello.portlet.jar"/>
-      <attribute name="size" type="Long" value="5781"/>
+      <attribute name="size" type="Long" value="5782"/>
       <attribute name="mime" value="application/vnd.osgi.bundle"/>
     </capability>
     <capability namespace="osgi.wiring.bundle">
       <attribute name="osgi.wiring.bundle" value="com.liferay.training.hello.portlet"/>
-      <attribute name="bundle-version" type="Version" value="0.0.0.201607290235"/>
+      <attribute name="bundle-version" type="Version" value="0.0.0.201609231756"/>
     </capability>
     <capability namespace="osgi.wiring.host">
       <attribute name="osgi.wiring.host" value="com.liferay.training.hello.portlet"/>
-      <attribute name="bundle-version" type="Version" value="0.0.0.201607290235"/>
+      <attribute name="bundle-version" type="Version" value="0.0.0.201609231756"/>
     </capability>
     <capability namespace="osgi.service">
       <attribute name="objectClass" type="List&lt;String&gt;" value="javax.portlet.Portlet"/>

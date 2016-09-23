@@ -1,0 +1,8 @@
+Bundle-SymbolicName: com.liferay.demo.twitterrule
+Bundle-Version: 1.0.0
+Web-ContextPath: /content-targeting-rule-com.liferay.demo.twitterrule
+
+Include-Resource:
+	lib/twitter4j-core-4.0.4.jar
+	
+Bundle-ClassPath: lib/twitter4j-core-4.0.4.jar

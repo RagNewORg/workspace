@@ -3,13 +3,8 @@ Bundle-Version: 1.0.0
 -jsp: *.jsp,*.jspf
 -plugin.jsp: com.liferay.ant.bnd.jsp.JspAnalyzerPlugin
 -sources: true
-Bundle-ClassPath: salesforce-service/src/main/java/com/liferay/salesforce/connection
-Import-Package: \
-	com.liferay.salesforce.connection\
-	*
-Include-Resource: @com.liferay.util.java-2.2.0.jar
--includeresource: lib/json-20160810.jar
-Private-Package: \
-	com.liferay.salesforce.portlet,\
-	com.liferay.salesforce.portlet.action,\
-	com.liferay.salesforce.util
+Import-Package: *
+Include-Resource: @com.sforce.soap.partner-1.0.2.jar , \
+				  @com.liferay.util.java-2.2.0.jar
+Bundle-ClassPath: lib/json-20160810.jar, lib/jazzy-0.5.2.jar
+-includeresource: lib/json-20160810.jar, lib/jazzy-0.5.2.jar
