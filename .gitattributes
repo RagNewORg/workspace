@@ -71,5 +71,5 @@ LICENSE crlf=input
 *.ots binary
 *.ott binary
 *.key binary
-*.numbers binary
+*.numb binary
 *.pages binary
