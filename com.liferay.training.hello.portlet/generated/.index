@@ -1,3 +1,6 @@
+new update from 3rd feb
+
+
 <?xml version="1.0" encoding="utf-8"?>
 <repository increment="1474653386666" name="com.liferay.training.hello.portlet" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
   <resource>
